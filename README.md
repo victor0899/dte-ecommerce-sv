@@ -2,7 +2,7 @@
 
 Sistema de gestión de pedidos y facturación electrónica (DTE) bajo la normativa de El Salvador.
 
-## 🎯 Descripción del Proyecto
+## Descripción del Proyecto
 
 Aplicación de e-commerce que simula el flujo completo de venta, culminando en la generación de documentos tributarios electrónicos (DTE) según la normativa salvadoreña.
 
@@ -11,7 +11,7 @@ Aplicación de e-commerce que simula el flujo completo de venta, culminando en l
 - **FCF** (Factura de Consumidor Final): Precio incluye IVA (13%)
 - **CCF** (Comprobante de Crédito Fiscal): Precio sin IVA + 13% separado
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
 ### Core
 - **React 18.3+** con Hooks funcionales
@@ -49,7 +49,7 @@ Aplicación de e-commerce que simula el flujo completo de venta, culminando en l
 - **Prettier** (formateo)
 - **TypeScript** (tipado estático)
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 src/
@@ -71,7 +71,7 @@ src/
 └── utils/              # Utilidades (cálculos, formateo, etc.)
 ```
 
-## 🚀 Instalación y Configuración
+## Instalación y Configuración
 
 ### Prerequisitos
 
@@ -96,7 +96,7 @@ VITE_TAX_RATE=0.13
 VITE_DTE_PREFIX=DTE-01
 ```
 
-## 🧑‍💻 Comandos Disponibles
+## Comandos Disponibles
 
 ```bash
 # Desarrollo
@@ -120,9 +120,9 @@ pnpm test:coverage       # Ejecutar tests con cobertura
 pnpm preview             # Preview del build de producción
 ```
 
-## 📋 Funcionalidades
+## Funcionalidades
 
-### ✅ Implementadas
+### Implementadas
 
 #### Módulo de Productos
 - [x] Catálogo con 6 productos variados (laptops, periféricos, monitores)
@@ -197,7 +197,7 @@ pnpm preview             # Preview del build de producción
 - [x] Manejo robusto de errores
 - [x] Logging detallado en desarrollo
 
-## 📝 Estándares de Código
+## Estándares de Código
 
 ### Conventional Commits
 
@@ -220,7 +220,7 @@ El código se formatea automáticamente con Prettier. Configuración:
 - Ancho máximo: `80`
 - Tab width: `2 espacios`
 
-## 🧪 Testing
+## Testing
 
 Los tests se ejecutan con Vitest y están organizados en:
 
@@ -231,7 +231,7 @@ tests/
 └── setup.ts           # Configuración global de tests
 ```
 
-## 📦 Dependencias Principales
+## Dependencias Principales
 
 | Dependencia | Versión | Propósito |
 |-------------|---------|-----------|
@@ -243,13 +243,13 @@ tests/
 | jspdf | ^4.2.1 | Generación PDF |
 | vitest | ^4.1.5 | Testing |
 
-## 📖 Documentación Adicional
+## Documentación Adicional
 
 - [Guía de Facturación Electrónica SV](../FE-TAIIA-v2-28-03-2023-con-videos.pdf)
 - [Guía de Integración DTE](../FESVDGIIMH_GuiaIntegracionFacturaElectronicasSV.pdf)
 - [Especificaciones de la Prueba Técnica](../Prueba%20Técnica%20Mid-Junior_%20E-Commerce%20y%20Facturación%20Electrónica%20SV.pdf)
 
-## 👨‍💻 Desarrollo
+## Desarrollo
 
 El proyecto está configurado con:
 - Hot Module Replacement (HMR) para desarrollo rápido
@@ -258,7 +258,7 @@ El proyecto está configurado con:
 - Linting en tiempo real
 - Tests en modo watch
 
-## 💡 Cómo Usar
+## Cómo Usar
 
 ### 1. Navegar por el Catálogo
 - Explora los productos disponibles en la página principal
@@ -292,7 +292,7 @@ El proyecto está configurado con:
 - Haz clic en cualquier factura para ver detalles completos
 - Re-genera el PDF si es necesario
 
-## 📸 Screenshots
+## Screenshots
 
 ### Catálogo de Productos
 - Vista de grid responsiva con productos
@@ -317,16 +317,16 @@ El proyecto está configurado con:
 - Búsqueda y filtrado
 - Detalles completos por factura
 
-## 🚧 Estado del Proyecto
+## Estado del Proyecto
 
-**Configuración Inicial:** ✅ Completada
-**Desarrollo de Funcionalidades:** ✅ Completado
-**UI/UX Responsive:** ✅ Completado
-**Generación de DTE:** ✅ Completado
-**Testing:** ⏳ Pendiente
-**Documentación:** ✅ Completada
+- **Configuración Inicial:** Completada
+- **Desarrollo de Funcionalidades:** Completado
+- **UI/UX Responsive:** Completado
+- **Generación de DTE:** Completado
+- **Testing:** Pendiente
+- **Documentación:** Completada
 
-## 🔄 Próximas Mejoras
+## Próximas Mejoras
 
 - [ ] Tests unitarios y de integración
 - [ ] Autenticación de usuarios
@@ -337,7 +337,7 @@ El proyecto está configurado con:
 - [ ] Múltiples métodos de pago
 - [ ] Integración con API del Ministerio de Hacienda
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto es de código abierto y está disponible bajo la licencia MIT.
 
