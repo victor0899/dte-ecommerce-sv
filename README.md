@@ -122,49 +122,80 @@ pnpm preview             # Preview del build de producción
 
 ## 📋 Funcionalidades
 
-### ✅ Implementadas en Configuración Base
-
-- [x] Proyecto inicializado con Vite + React + TypeScript
-- [x] Tailwind CSS configurado
-- [x] ESLint + Prettier configurados
-- [x] Vitest configurado
-- [x] Path aliases (@/) configurados
-- [x] Tipos TypeScript base creados
-- [x] Estructura de carpetas creada
-- [x] Variables de entorno configuradas
-
-### 🔨 Por Implementar
+### ✅ Implementadas
 
 #### Módulo de Productos
-- [ ] Catálogo con mínimo 4 productos
-- [ ] Imágenes de productos (Unsplash)
-- [ ] Formato de precios
+- [x] Catálogo con 6 productos variados (laptops, periféricos, monitores)
+- [x] Imágenes de productos desde Unsplash
+- [x] Formato de precios con IVA incluido
+- [x] Indicadores de stock disponible
+- [x] Cards responsivas con hover effects
+- [x] Controles de cantidad integrados en las cards
+  - Incrementar/decrementar cantidad
+  - Eliminar del carrito
+  - Validación de stock disponible
 
 #### Módulo de Carrito
-- [ ] Añadir/eliminar productos
-- [ ] Actualizar cantidades
-- [ ] Cálculo dinámico
-- [ ] Persistencia en localStorage
+- [x] Añadir/eliminar productos
+- [x] Actualizar cantidades desde las product cards
+- [x] Controles +/- en tiempo real
+- [x] Cálculo dinámico de totales
+- [x] Persistencia en localStorage
+- [x] Contador de items en header
+- [x] Resumen de pedido con subtotales
+- [x] Validación de stock al agregar productos
 
 #### Módulo de Facturación
-- [ ] Selector de tipo de documento (FCF/CCF)
-- [ ] Formulario FCF con validaciones
-- [ ] Formulario CCF con validaciones (NRC, NIT obligatorios)
-- [ ] Cálculo correcto de IVA (13%)
-- [ ] Generación de JSON DTE
-- [ ] Generación de PDF imprimible
+- [x] Selector de tipo de documento (FCF/CCF)
+- [x] Formulario FCF con validaciones
+  - Nombre completo
+  - DUI o NIT (opcional)
+  - Correo electrónico
+- [x] Formulario CCF con validaciones completas
+  - Tipo de persona (jurídica/natural)
+  - Razón social
+  - NRC con máscara automática (XXXXXX-X)
+  - NIT con máscara automática (XXXX-XXXXXX-XXX-X)
+  - Actividad económica
+  - Dirección completa con departamentos y municipios
+  - Validación de todos los campos obligatorios
+- [x] Cálculo correcto de IVA (13%)
+- [x] Generación de JSON DTE según normativa
+- [x] Generación de PDF imprimible con html2canvas
+- [x] Descarga automática de JSON y PDF
+- [x] Templates profesionales de factura
 
 #### Módulo de Historial
-- [ ] Lista de facturas generadas
-- [ ] Detalle de cada factura
-- [ ] Persistencia en localStorage
-- [ ] Re-imprimir PDF
+- [x] Lista de facturas generadas
+- [x] Detalle completo de cada factura
+- [x] Persistencia en localStorage
+- [x] Re-generar PDF desde historial
+- [x] Visualización de todos los datos DTE
+- [x] Información de emisor y receptor
+- [x] Desglose de items y totales
 
-#### Testing
-- [ ] Tests de cálculos de IVA
-- [ ] Tests de validaciones
-- [ ] Tests de generación de DTE
-- [ ] Tests de flujo de checkout
+#### UI/UX
+- [x] Diseño completamente responsive
+  - Mobile (< 768px)
+  - Tablet (768px - 1024px)
+  - Desktop (> 1024px)
+- [x] Menú hamburguesa en móvil
+- [x] Navegación sticky
+- [x] Footer informativo
+- [x] Estados de carga (loading states)
+- [x] Mensajes de error claros
+- [x] Validaciones en tiempo real
+- [x] Layout limpio y profesional
+
+#### Características Técnicas
+- [x] TypeScript en todo el proyecto
+- [x] Context API para estado global
+- [x] Custom hooks reutilizables
+- [x] Componentes modulares
+- [x] Validación con Zod schemas
+- [x] React Hook Form para formularios
+- [x] Manejo robusto de errores
+- [x] Logging detallado en desarrollo
 
 ## 📝 Estándares de Código
 
@@ -227,13 +258,91 @@ El proyecto está configurado con:
 - Linting en tiempo real
 - Tests en modo watch
 
+## 💡 Cómo Usar
+
+### 1. Navegar por el Catálogo
+- Explora los productos disponibles en la página principal
+- Cada producto muestra: imagen, nombre, descripción, precio y stock
+
+### 2. Agregar al Carrito
+- Haz clic en "Agregar al carrito" en cualquier producto
+- Una vez agregado, verás controles +/- para ajustar la cantidad
+- Usa el botón de eliminar para quitar el producto del carrito
+- El contador en el header muestra el total de items
+
+### 3. Generar Factura
+- Haz clic en el ícono del carrito para ir a checkout
+- Revisa tu pedido en el resumen
+- Selecciona el tipo de documento:
+  - **FCF**: Para consumidor final (solo nombre y correo)
+  - **CCF**: Para crédito fiscal (requiere NRC, NIT, dirección completa)
+- Completa el formulario (las máscaras de NRC y NIT se aplican automáticamente)
+- Haz clic en "Generar Factura"
+
+### 4. Resultado
+- Se generará y descargará automáticamente:
+  - JSON con los datos DTE
+  - PDF de la factura imprimible
+- La factura se guardará en el historial
+- Serás redirigido a la página de detalle de la factura
+
+### 5. Ver Historial
+- Accede a "Historial" desde el menú
+- Consulta todas las facturas generadas
+- Haz clic en cualquier factura para ver detalles completos
+- Re-genera el PDF si es necesario
+
+## 📸 Screenshots
+
+### Catálogo de Productos
+- Vista de grid responsiva con productos
+- Cards con imágenes, precios y controles de cantidad
+- Indicadores de stock y botones interactivos
+
+### Proceso de Checkout
+- Resumen del carrito con totales
+- Selector de tipo de documento (FCF/CCF)
+- Formularios con validaciones en tiempo real
+- Máscaras automáticas para NRC y NIT
+
+### Factura Generada
+- Template profesional con todos los datos DTE
+- Información de emisor y receptor
+- Desglose de items con precios
+- Totales y cálculo de IVA
+- Códigos de generación y control
+
+### Historial de Facturas
+- Lista de todas las facturas generadas
+- Búsqueda y filtrado
+- Detalles completos por factura
+
 ## 🚧 Estado del Proyecto
 
 **Configuración Inicial:** ✅ Completada
-**Desarrollo de Funcionalidades:** 🔨 Listo para comenzar
-**Testing:** ⏳ Configurado y listo
+**Desarrollo de Funcionalidades:** ✅ Completado
+**UI/UX Responsive:** ✅ Completado
+**Generación de DTE:** ✅ Completado
+**Testing:** ⏳ Pendiente
 **Documentación:** ✅ Completada
+
+## 🔄 Próximas Mejoras
+
+- [ ] Tests unitarios y de integración
+- [ ] Autenticación de usuarios
+- [ ] Backend con base de datos
+- [ ] Panel de administración
+- [ ] Filtros y búsqueda de productos
+- [ ] Envío de facturas por email
+- [ ] Múltiples métodos de pago
+- [ ] Integración con API del Ministerio de Hacienda
+
+## 📄 Licencia
+
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.
 
 ---
 
-Desarrollado como prueba técnica para puesto de Desarrollador Frontend Mid-Junior
+**Versión:** 2.0.0
+**Última actualización:** Abril 2026
+Desarrollado con React + TypeScript + Vite
