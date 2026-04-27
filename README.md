@@ -128,12 +128,9 @@ pnpm preview             # Preview del build de producción
 - [x] Catálogo con 6 productos variados (laptops, periféricos, monitores)
 - [x] Imágenes de productos desde Unsplash
 - [x] Formato de precios con IVA incluido
-- [x] Indicadores de stock disponible
-- [x] Cards responsivas con hover effects
 - [x] Controles de cantidad integrados en las cards
   - Incrementar/decrementar cantidad
   - Eliminar del carrito
-  - Validación de stock disponible
 
 #### Módulo de Carrito
 - [x] Añadir/eliminar productos
@@ -143,7 +140,6 @@ pnpm preview             # Preview del build de producción
 - [x] Persistencia en localStorage
 - [x] Contador de items en header
 - [x] Resumen de pedido con subtotales
-- [x] Validación de stock al agregar productos
 
 #### Módulo de Facturación
 - [x] Selector de tipo de documento (FCF/CCF)
@@ -195,7 +191,6 @@ pnpm preview             # Preview del build de producción
 - [x] Validación con Zod schemas
 - [x] React Hook Form para formularios
 - [x] Manejo robusto de errores
-- [x] Logging detallado en desarrollo
 
 ## Estándares de Código
 
@@ -292,50 +287,14 @@ El proyecto está configurado con:
 - Haz clic en cualquier factura para ver detalles completos
 - Re-genera el PDF si es necesario
 
-## Screenshots
-
-### Catálogo de Productos
-- Vista de grid responsiva con productos
-- Cards con imágenes, precios y controles de cantidad
-- Indicadores de stock y botones interactivos
-
-### Proceso de Checkout
-- Resumen del carrito con totales
-- Selector de tipo de documento (FCF/CCF)
-- Formularios con validaciones en tiempo real
-- Máscaras automáticas para NRC y NIT
-
-### Factura Generada
-- Template profesional con todos los datos DTE
-- Información de emisor y receptor
-- Desglose de items con precios
-- Totales y cálculo de IVA
-- Códigos de generación y control
-
-### Historial de Facturas
-- Lista de todas las facturas generadas
-- Búsqueda y filtrado
-- Detalles completos por factura
-
 ## Estado del Proyecto
 
 - **Configuración Inicial:** Completada
 - **Desarrollo de Funcionalidades:** Completado
 - **UI/UX Responsive:** Completado
 - **Generación de DTE:** Completado
-- **Testing:** Pendiente
+- **Testing:** Completado
 - **Documentación:** Completada
-
-## Próximas Mejoras
-
-- [ ] Tests unitarios y de integración
-- [ ] Autenticación de usuarios
-- [ ] Backend con base de datos
-- [ ] Panel de administración
-- [ ] Filtros y búsqueda de productos
-- [ ] Envío de facturas por email
-- [ ] Múltiples métodos de pago
-- [ ] Integración con API del Ministerio de Hacienda
 
 ## Licencia
 
